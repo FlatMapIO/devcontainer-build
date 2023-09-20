@@ -1,6 +1,16 @@
 {
 	"name": "CUDA",
-	"image": "docker pull huodon/pytorch-cuda:118", // https://hub.docker.com/r/nvidia/cuda/tags
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu", // https://hub.docker.com/r/nvidia/cuda/tags
+	"features": {
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installJupyterlab": true
+		},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/git-lfs:1": {}
+	},
 	// "build": {
 	// 	"context": "..",
 	// 	"dockerfile": "../Dockerfile",
@@ -12,6 +22,9 @@
 		"--gpus",
 		"all"
 	],
+	"hostRequirements": {
+		"gpu": "optional"
+	},
 	"remoteEnv": {
 		"PATH": "${containerEnv:PATH}:/usr/local/cuda/bin",
 		"LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64",
