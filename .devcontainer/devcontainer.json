@@ -1,13 +1,13 @@
 {
 	"name": "CUDA",
-	// "image": "nvidia/cuda:11.8.0-devel-ubuntu22.04", // https://hub.docker.com/r/nvidia/cuda/tags
-	"build": {
-		"context": "..",
-		"dockerfile": "../Dockerfile",
-		"args": {
-			"NODE_VERSION": "none"
-		},
-	},
+	"image": "docker pull huodon/pytorch-cuda:118", // https://hub.docker.com/r/nvidia/cuda/tags
+	// "build": {
+	// 	"context": "..",
+	// 	"dockerfile": "../Dockerfile",
+	// 	"args": {
+	// 		"NODE_VERSION": "none"
+	// 	},
+	// },
 	"runArgs": [
 		"--gpus",
 		"all"
