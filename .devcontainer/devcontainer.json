@@ -1,16 +1,18 @@
 {
 	"name": "CUDA",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu", // https://hub.docker.com/r/nvidia/cuda/tags
-	"features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
-			"installCudnn": true
-		},
-		"ghcr.io/devcontainers/features/python:1": {
-			"installJupyterlab": true
-		},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/git-lfs:1": {}
-	},
+	"image": "huodon/pytorch-cuda:118",
+
+	// "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // https://hub.docker.com/r/nvidia/cuda/tags
+	// "features": {
+	// 	"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+	// 		"installCudnn": true
+	// 	},
+	// 	"ghcr.io/devcontainers/features/python:1": {
+	// 		"installJupyterlab": true
+	// 	},
+	// 	"ghcr.io/devcontainers/features/git:1": {},
+	// 	"ghcr.io/devcontainers/features/git-lfs:1": {}
+	// },
 	// "build": {
 	// 	"context": "..",
 	// 	"dockerfile": "../Dockerfile",
