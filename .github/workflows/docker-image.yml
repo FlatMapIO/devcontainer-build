@@ -19,7 +19,9 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm install -g @devcontainers/cli
       - name: Build image
-        run: devcontainer build --workspace-folder . --push
+        run: devcontainer build --workspace-folder .   --image-name pytorch-cuda --platform linux/amd64 --push
+      - name: Build report
+        run: docker images
       # - name: Build and push
       #   uses: docker/build-push-action@v5
       #   with:
