@@ -15,10 +15,15 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: huodon/pytorch-cuda:118
+      - name: Node
+        uses: actions/setup-node@v3
+      - run: npm install -g @devcontainers/cli
+      - name: Build image
+        run: devcontainer build --workspace-folder . --push
+      # - name: Build and push
+      #   uses: docker/build-push-action@v5
+      #   with:
+      #     context: .
+      #     file: ./Dockerfile
+      #     push: true
+      #     tags: huodon/pytorch-cuda:118
