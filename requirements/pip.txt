@@ -1,0 +1,9 @@
+numpy
+huggingface-hub
+transformers
+diffusers[torch]
+accelerate
+peft
+optimum
+xformers
+ipykernel
