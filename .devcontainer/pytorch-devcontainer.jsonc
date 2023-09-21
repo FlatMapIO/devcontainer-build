@@ -20,5 +20,19 @@
 		// "./features/ai-kits": {
 		// 	"indexUrl": "https://pypi.python.org/simple",
 		// }
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Codeium.codeium",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-toolsai.jupyter-keymap",
+				"ms-toolsai.vscode-jupyter-slideshow",
+				"ms-toolsai.vscode-jupyter-powertoys"
+			]
+		}
 	}
 }
