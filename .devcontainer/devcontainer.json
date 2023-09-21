@@ -1,4 +1,0 @@
-{
-	"name": "pytorch-cuda",
-	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-}
