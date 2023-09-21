@@ -1,12 +1,13 @@
-## Layers
-- python3
-- cuda 11.8
-- cudnn 8.9.5.*
+## Featurs
+- https://github.com/devcontainers/features/tree/main/src/nvidia-cuda
+- https://github.com/devcontainers/features/tree/main/src/python
+- https://github.com/devcontainers/features/tree/main/src/git
 
-- torch `requirements/torch.txt`
-- huggingface kit
+
 ## Usage
 ```
 docker pull huodon/pytorch-cuda:118
 ```
 
+## Links
+- https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
