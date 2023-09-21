@@ -13,12 +13,12 @@
 		},
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/git-lfs:1": {},
-		"./features/fish":{},
+		"./features/fish": {},
 		"./features/pytorch": {
 			// "indexUrl": "https://download.pytorch.org/whl/cu118"
 		},
-		"./features/ai-kits": {
-			// "indexUrl": "https://pypi.python.org/simple",
-		}
+		// "./features/ai-kits": {
+		// 	"indexUrl": "https://pypi.python.org/simple",
+		// }
 	}
 }

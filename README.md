@@ -10,7 +10,9 @@
 ```bash
 docker pull huodon/pytorch-devcontainer:118
 
-cp .devcontainer/devcontainer.example.json .devcontainer/devcontainer.json
+git clone --depth 1 git@github.com:FlatMapIO/pytorch-devcontainer.git my-repo
+cd my-repo
+rm .git
 ```
 
 ## Build
@@ -23,6 +25,7 @@ devcontainer build \
     --config ./.devcontainer/vscode-pytorch-image.jsonc \
     --image-name huodon/pytorch-devcontainer:118
 ```
+
 
 ## Links
 - https://hub.docker.com/r/huodon/pytorch-devcontainer/tags
