@@ -8,7 +8,7 @@
 ## Usage
 
 ```bash
-curl -sSL  https://raw.githubusercontent.com/FlatMapIO/pytorch-devcontainer/main/.devcontainer/init.sh | bash
+curl -sSL https://dub.sh/pytorch-devcontainer | bash
 ```
 
 ## Build
