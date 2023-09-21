@@ -7,7 +7,7 @@ DOCKER=`which docker`
 # if docker exists, execute docker pull
 if [ -n "$DOCKER" ]; then
   read -p "Pull $IMAGE? [y/N] " confirm
-  if [ "$confirm" = "" ] || [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+  if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
     echo "Pulling $IMAGE..."
     $DOCKER pull $IMAGE
   fi
