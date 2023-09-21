@@ -8,11 +8,7 @@
 ## Usage
 
 ```bash
-docker pull huodon/pytorch-devcontainer:118
-
-git clone --depth 1 git@github.com:FlatMapIO/pytorch-devcontainer.git my-repo
-cd my-repo
-rm .git
+curl -sSL  https://raw.githubusercontent.com/FlatMapIO/pytorch-devcontainer/main/.devcontainer/init.sh | bash
 ```
 
 ## Build
