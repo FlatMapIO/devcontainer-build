@@ -26,6 +26,7 @@ install() {
   ensure_dir ".devcontainer"
   ensure_dir scripts
   curl -sL $BASE_URL/.devcontainer/devcontainer.example.json > ./.devcontainer/devcontainer.json
+  curl -sL $BASE_URL/.devcontainer/update.sh > ./.devcontainer/update.sh
   curl -sL $BASE_URL/scripts/env-info.py > scripts/env-info.py
 }
 

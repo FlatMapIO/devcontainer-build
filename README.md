@@ -8,7 +8,7 @@
 ## Usage
 
 ```bash
-curl -sSL https://dub.sh/pytorch-devcontainer | bash
+curl -fsSL https://dub.sh/pytorch-devcontainer | bash
 ```
 
 ## Build
