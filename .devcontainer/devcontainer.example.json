@@ -1,18 +1,6 @@
 {
 	"name": "pytorch-cuda",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-	"features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
-			"installCudnn": true,
-			// https://developer.nvidia.com/rdp/cudnn-download
-			"cudnnVersion": "8.9.5.29"
-		},
-		"ghcr.io/devcontainers/features/python:1": {
-			"installJupyterlab": true
-		},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/git-lfs:1": {}
-	},
+	"image": "huodon/pytorch-devcontainer",
 	"runArgs": [
 		"--gpus",
 		"all"

@@ -1,0 +1,23 @@
+{
+	"name": "pytorch-devcontainer",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true,
+			// https://developer.nvidia.com/rdp/cudnn-download
+			"cudnnVersion": "8.9.5.29"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": false,
+			"installJupyterlab": false
+		},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/git-lfs:1": {},
+		"./features/pytorch": {
+			// "indexUrl": "https://download.pytorch.org/whl/cu118"
+		},
+		"./features/ai-kits": {
+			// "indexUrl": "https://pypi.python.org/simple",
+		}
+	}
+}

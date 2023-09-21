@@ -1,0 +1,19 @@
+{
+    "id": "pytorch",
+    "version": "1.0.1",
+    "name": "Pytorch",
+    "description": "Pip install pytorch",
+    "options": {
+        "indexUrl": {
+            "type": "string",
+            "default": "https://download.pytorch.org/whl/cu118",
+            "description": ""
+        }
+    },
+    "containerEnv": {
+
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/python"
+    ]
+}

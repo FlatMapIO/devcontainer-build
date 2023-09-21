@@ -19,13 +19,6 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm install -g @devcontainers/cli
       - name: Build image
-        run: devcontainer build --workspace-folder . --image-name huodon/pytorch-cuda:118 --platform linux/amd64
+        run: devcontainer build --workspace-folder . --image-name huodon/pytorch-devcontainer:118 --platform linux/amd64
       - name: Push image
-        run: docker push huodon/pytorch-cuda:118
-      # - name: Build and push
-      #   uses: docker/build-push-action@v5
-      #   with:
-      #     context: .
-      #     file: ./Dockerfile
-      #     push: true
-      #     tags: huodon/pytorch-cuda:118
+        run: docker push huodon/pytorch-devcontainer:118
