@@ -6,7 +6,11 @@ DOCKER=`which docker`
 
 # if docker exists, execute docker pull
 if [ -n "$DOCKER" ]; then
-  $DOCKER pull $IMAGE
+  read -p "Pull $IMAGE? [y/N] " confirm
+  if [ "$confirm" = "" ] || [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+    echo "Pulling $IMAGE..."
+    $DOCKER pull $IMAGE
+  fi
 fi
 
 ensure_dir() {
@@ -18,6 +22,7 @@ ensure_dir() {
 BASE_URL=https://raw.githubusercontent.com/FlatMapIO/pytorch-devcontainer/main
 
 install() {
+  echo "Installing..."
   ensure_dir ".devcontainer"
   ensure_dir scripts
   curl -sL $BASE_URL/.devcontainer/devcontainer.example.json > ./.devcontainer/devcontainer.json
