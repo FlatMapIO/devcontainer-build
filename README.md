@@ -8,7 +8,7 @@
 ## Usage
 
 ```bash
-curl -fsSL https://dub.sh/pytorch-devcontainer | bash
+/bin/bash -c "$(curl -fsSL https://dub.sh/pytorch-devcontainer)"
 ```
 > Execute `./scripts/up.sh` to keep up to date
 

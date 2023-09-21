@@ -1,3 +1,1 @@
-#!/bin/bash
-
-curl -fsSL https://dub.sh/pytorch-devcontainer | bash
+/bin/bash -c "$(curl -fsSL https://dub.sh/pytorch-devcontainer)"
