@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json",
-	"name": "pytorch-cuda",
+	"name": "vscode-pytorch",
 	"image": "huodon/pytorch-devcontainer:118",
 	"runArgs": [
 		"--gpus",
