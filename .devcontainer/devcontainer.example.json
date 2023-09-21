@@ -19,7 +19,7 @@
 		"nvidia-smi"
 	],
 	// "mounts": [
-	// 	"source=${localEnv:HOME}/.cache,target=/home/vscode/.cache"
+	// 	"source=${localEnv:HOME}/.cache,target=/home/vscode/.cache,type=bind,consistency=cached"
 	// ],
 	"customizations": {
 		"vscode": {
