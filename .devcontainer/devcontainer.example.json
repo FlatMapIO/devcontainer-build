@@ -1,4 +1,5 @@
 {
+	"$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json",
 	"name": "pytorch-cuda",
 	"image": "huodon/pytorch-devcontainer",
 	"runArgs": [
@@ -17,6 +18,9 @@
 	"postCreateCommand": [
 		"nvidia-smi"
 	],
+	// "mounts": [
+	// 	"source=${localEnv:HOME}/.cache,target=/home/vscode/.cache"
+	// ],
 	"customizations": {
 		"vscode": {
 			"extensions": [
