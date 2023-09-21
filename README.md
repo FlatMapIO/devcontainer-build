@@ -10,6 +10,7 @@
 ```bash
 curl -fsSL https://dub.sh/pytorch-devcontainer | bash
 ```
+> Execute `./scripts/up.sh` to keep up to date
 
 ## Build
 
