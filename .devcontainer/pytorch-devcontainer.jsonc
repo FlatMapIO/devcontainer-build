@@ -13,6 +13,7 @@
 		},
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/git-lfs:1": {},
+		"./features/fish":{},
 		"./features/pytorch": {
 			// "indexUrl": "https://download.pytorch.org/whl/cu118"
 		},

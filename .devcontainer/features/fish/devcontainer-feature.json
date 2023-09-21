@@ -1,0 +1,12 @@
+{
+    "id": "fish",
+    "version": "1.0.0",
+    "name": "Fish shell",
+    "description": "Install fish shell",
+    "options": {
+    },
+    "containerEnv": {},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
