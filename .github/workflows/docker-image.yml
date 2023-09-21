@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm install -g @devcontainers/cli
       - name: Build image
-        run: |
+        run: >
           devcontainer build
             --workspace-folder .
             --config ./.devcontainer/pytorch-devcontainer.jsonc
