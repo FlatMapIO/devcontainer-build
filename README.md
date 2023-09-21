@@ -1,4 +1,4 @@
-## Featurs
+## Features
 - https://github.com/devcontainers/features/tree/main/src/nvidia-cuda
 - https://github.com/devcontainers/features/tree/main/src/python
 - https://github.com/devcontainers/features/tree/main/src/git
