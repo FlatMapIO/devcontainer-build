@@ -27,3 +27,4 @@ devcontainer build \
 ## Links
 - https://hub.docker.com/r/huodon/pytorch-devcontainer/tags
 - https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
+- [配置 nvidia container toolkit](./docs/ubuntu-nvidia-container.md)
