@@ -25,4 +25,5 @@ devcontainer build \
 ```
 
 ## Links
+- https://hub.docker.com/r/huodon/pytorch-devcontainer/tags
 - https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
