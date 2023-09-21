@@ -12,7 +12,8 @@ docker pull huodon/pytorch-devcontainer:118
 
 git clone --depth 1 https://github.com/FlatMapIO/pytorch-devcontainer.git my-repo
 cd my-repo
-rm .git
+rm -rf .git
+mv .devcontainer/devcontainer.example.json .devcontainer/devcontainer.json
 ```
 
 ## Build
