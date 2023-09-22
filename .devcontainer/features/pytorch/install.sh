@@ -5,6 +5,6 @@ user_exec() {
     su - vscode -c "$COMMAND"
 }
 
-user_exec ${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-dir \
+user_exec ${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-dir -v \
     torch torchvision torchaudio --extra-index-url "${INDEXURL}" \
     xformers
