@@ -1,11 +1,8 @@
 #!/usr/bin/bash
 
-user_exec() {
-    COMMAND="$*"
-    su - vscode -c "$COMMAND"
-}
+su vscode
 
-user_exec ${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-dir -v \
+${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-dir -v \
     --index-url ${INDEXURL} \
     numpy \
     huggingface-hub \

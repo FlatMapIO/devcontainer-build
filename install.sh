@@ -32,6 +32,7 @@ install() {
   fi
   curl -sL $BASE_URL/scripts/env-info.py > scripts/env-info.py
   curl -sL $BASE_URL/scripts/up.sh > scripts/up.sh; chmod +x scripts/up.sh
+  curl -sL $BASE_URL/scripts/config.example.fish > scripts/config.example.fish
 }
 
 # 检查是否有.devcontainer目录
