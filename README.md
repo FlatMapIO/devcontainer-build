@@ -7,22 +7,30 @@
 
 ## Usage
 
+
 ```bash
+
+mkdir my-pytorch-project;
+cd my-pytorch-project
+
 /bin/bash -c "$(curl -fsSL https://dub.sh/pytorch-devcontainer)"
+
+
 ```
 > Execute `./scripts/up.sh` to keep up to date
 
-## Build
+## Build customized image
 
 ```bash
 npm install -g @devcontainers/cli
+
+# update vscode-pytorch-image.jsonc
 
 devcontainer build \
     --workspace-folder . \
     --config ./.devcontainer/vscode-pytorch-image.jsonc \
     --image-name huodon/pytorch-devcontainer:118
 ```
-
 
 ## Links
 - https://hub.docker.com/r/huodon/pytorch-devcontainer/tags
