@@ -1,5 +1,7 @@
-${PYTHON_PATH}/bin/python -m pip install \
-    --user --upgrade --no-cache-dir -v --index-url ${INDEXURL} \
+source ./py-utils.sh
+
+install_user_package \
+    --index-url ${INDEXURL} \
     numpy \
     huggingface-hub \
     transformers \
