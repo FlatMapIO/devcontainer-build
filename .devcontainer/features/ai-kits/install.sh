@@ -1,5 +1,5 @@
 ${PYTHON_PATH}/bin/python -m pip install \
-    --user --upgrade --no-cache-dir --index-url ${INDEXURL} \
+    --user --upgrade --no-cache-dir -v --index-url ${INDEXURL} \
     numpy \
     huggingface-hub \
     transformers \
