@@ -1,5 +1,6 @@
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"automatic"}"}"
 
+# Determine the appropriate non-root user
 if [ "${USERNAME}" = "auto" ] || [ "${USERNAME}" = "automatic" ]; then
     USERNAME=""
     POSSIBLE_USERS=("vscode" "node" "codespace" "$(awk -v val=1000 -F ":" '$3==val{print $1}' /etc/passwd)")
@@ -27,7 +28,7 @@ sudo_if() {
 
 install_user_package() {
     PACKAGE="$1"
-    sudo_if "${PYTHON_PATH}/bin/python3" -m pip install --user --upgrade -v --no-cache-dir "$PACKAGE"
+    sudo_if "${PYTHON_SRC}" -m pip install --user --upgrade --no-cache-dir "$PACKAGE"
 }
 
 install_user_package \
