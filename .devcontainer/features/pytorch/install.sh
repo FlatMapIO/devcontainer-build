@@ -1,7 +1,11 @@
 #!/usr/bin/bash
 
-su vscode
+user_exec() {
+    COMMAND="$*"
+    su - vscode -c "$COMMAND"
+}
 
-${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-dir -v \
+
+user_exec ${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-dir -v \
     torch torchvision torchaudio --extra-index-url "${INDEXURL}" \
     xformers
