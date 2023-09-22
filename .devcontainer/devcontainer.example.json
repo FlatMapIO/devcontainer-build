@@ -24,6 +24,11 @@
 	],
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				}
+			},
 			"extensions": [
 				"Codeium.codeium",
 				"ms-python.black-formatter",
