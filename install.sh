@@ -25,8 +25,11 @@ install() {
   echo "Installing..."
   ensure_dir ".devcontainer"
   ensure_dir scripts
+
   curl -sL $BASE_URL/.devcontainer/devcontainer.example.json > ./.devcontainer/devcontainer.json
-  curl -sL $BASE_URL/.devcontainer/update.sh > ./.devcontainer/update.sh; chmod +x ./.devcontainer/update.sh
+  if ! [ -f  ./.devcontainer/update.sh ]; then
+    curl -sL $BASE_URL/.devcontainer/update.sh > ./.devcontainer/update.sh; chmod +x ./.devcontainer/update.sh
+  fi
   curl -sL $BASE_URL/scripts/env-info.py > scripts/env-info.py
   curl -sL $BASE_URL/scripts/up.sh > scripts/up.sh; chmod +x scripts/up.sh
 }
