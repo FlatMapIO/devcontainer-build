@@ -1,4 +1,5 @@
 {
+	"$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json",
 	"name": "pytorch-devcontainer",
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
 	"features": {
