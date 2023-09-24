@@ -2,7 +2,7 @@ echo "=========== Update you container on start ==========="
 
 echo "== Set pip cn mirror =="
 
-if [ TZ = "Asia/Shanghai"]; then
+if [ TZ = "Asia/Shanghai" ]; then
   echo "== Set cn source mirror =="
   pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
   sudo sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
@@ -16,6 +16,8 @@ fi
 
 if ! [ -z MODULAR_AUTH ]; then
   fish -c echo "== Install Mojo: https://developer.modular.com/download =="
-  curl https://get.modular.com | su -
+  curl https://get.modular.com | \
+    MODULAR_AUTH=$MODULAR_AUTH \
+    sh -
   # TODO set env
 fi
