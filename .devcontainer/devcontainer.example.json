@@ -12,8 +12,11 @@
 	"remoteEnv": {
 		"PATH": "${containerEnv:PATH}:/home/vscode/.local/bin",
 		"LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:/usr/local/cuda/lib64",
-		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda"
-		// "HTTPS_PROXY": "http://192.168.101.10:7890"
+		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda",
+		// if TZ set to Asia/Shanghai, will use china source mirror
+		"TZ":"Asia/Shanghai"
+		// "HTTPS_PROXY": "http://192.168.101.25:7890"
+		// "MODULAR_AUTH": "if set will install mojo"
 	},
 	"updateContentCommand": "bash .devcontainer/update.sh",
 	"postCreateCommand": [
