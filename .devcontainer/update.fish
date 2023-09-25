@@ -22,7 +22,10 @@ if test -n "$MODULAR_AUTH"
   curl https://get.modular.com | MODULAR_AUTH=$MODULAR_AUTH sh -
   modular install mojo
   if test -z "$MODULAR_HOME"
-    echo "set -x MODULAR_HOME \$HOME/.modular" >> ~/.config/fish/config.fish
-    echo "set -x PATH \$MODULAR_HOME/pkg/packages.modular.com_mojo/bin \$PATH" >> ~/.config/fish/config.fish
+    echo 'set -x MODULAR_HOME $HOME/.modular' >> ~/.config/fish/config.fish
+    echo 'set -x PATH $MODULAR_HOME/pkg/packages.modular.com_mojo/bin $PATH' >> ~/.config/fish/config.fish
+
+    echo 'export MODULAR_HOME=$HOME/.modular' > ~/.bashrc
+    echo 'export PATH=$HOME/pkg/packages.modular.com_mojo/bin:$PATH' > ~/.bashrc
   end
 end
