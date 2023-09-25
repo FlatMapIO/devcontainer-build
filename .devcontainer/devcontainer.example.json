@@ -16,7 +16,7 @@
 		// if TZ set to Asia/Shanghai, will use china source mirror
 		"TZ":"Asia/Shanghai",
 		// "HTTPS_PROXY": "http://192.168.101.25:7890",
-		// "MODULAR_AUTH": "if set will install mojo",
+		// "MODULAR_AUTH": "if set will install mojo from https://developer.modular.com/download",
 	},
 	"updateContentCommand": "fish .devcontainer/update.fish",
 	"postCreateCommand": [
