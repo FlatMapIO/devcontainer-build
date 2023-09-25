@@ -30,6 +30,7 @@
 			"extensions": [
 				"Codeium.codeium",
 				"ms-python.black-formatter",
+				"modular-mojotools.vscode-mojo",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"ms-toolsai.jupyter",
