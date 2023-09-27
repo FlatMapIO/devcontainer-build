@@ -20,6 +20,7 @@ end
 if test -f ./package.json
   echo ">> Install bun"
   curl -fsSL https://bun.sh/install | bash
+  echo 'set -x PATH ~/.bun/bin $PATH'  >> ~/.config/fish/config.fish
 end
 
 if test -n "$MODULAR_AUTH"
