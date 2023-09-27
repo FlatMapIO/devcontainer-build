@@ -27,6 +27,7 @@
 		"source=${localEnv:HOME}/.vscode-server,target=/home/vscode/.vscode-server,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.vscode-server-insiders,target=/home/vscode/.vscode-server-insiders,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.codeium,target=/home/vscode/.codeium,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.pip,target=/home/vscode/.pip,type=bind,consistency=cached",
 		"source=/mnt,target=/mnt,type=bind,consistency=cached"
 	],
 	"customizations": {
