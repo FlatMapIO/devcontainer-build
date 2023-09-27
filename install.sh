@@ -30,8 +30,8 @@ install() {
   if ! [ -f  ./.devcontainer/update.sh ]; then
     curl -sL $BASE_URL/.devcontainer/update.fish > ./.devcontainer/update.fish
   fi
-  curl -sL $BASE_URL/scripts/env-info.py > scripts/env-info.py
-  curl -sL $BASE_URL/scripts/up.sh > scripts/up.sh; chmod +x scripts/up.sh
+  curl -sL $BASE_URL/.devcontainer/up.sh > ./.devcontainer/up.sh; chmod +x ./.devcontainer/up.sh
+  curl -sL $BASE_URL/scripts/device_info.py > scripts/dev_info.py
 }
 
 # 检查是否有.devcontainer目录
