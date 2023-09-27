@@ -17,6 +17,11 @@ if test -f ./requirements.txt
 end
 
 
+if test -f ./package.json
+  echo ">> Install bun"
+  curl -fsSL https://bun.sh/install | bash
+end
+
 if test -n "$MODULAR_AUTH"
   echo ">> Install mojo from https://developer.modular.com/download"
   curl https://get.modular.com | MODULAR_AUTH=$MODULAR_AUTH sh -
