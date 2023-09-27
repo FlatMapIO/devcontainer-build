@@ -31,7 +31,7 @@ install() {
     curl -sL $BASE_URL/.devcontainer/update.fish > ./.devcontainer/update.fish
   fi
   curl -sL $BASE_URL/.devcontainer/up.sh > ./.devcontainer/up.sh; chmod +x ./.devcontainer/up.sh
-  curl -sL $BASE_URL/scripts/device_info.py > scripts/dev_info.py
+  curl -sL $BASE_URL/scripts/device_info.py > scripts/device_info.py
 }
 
 # 检查是否有.devcontainer目录
