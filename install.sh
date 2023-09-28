@@ -25,6 +25,8 @@ install() {
   echo "Installing..."
   ensure_dir ".devcontainer"
   ensure_dir scripts
+  ensure_dir docker
+
 
   curl -sL $BASE_URL/.devcontainer/devcontainer.example.json > ./.devcontainer/devcontainer.json
   if ! [ -f  ./.devcontainer/update.sh ]; then
@@ -32,6 +34,7 @@ install() {
   fi
   curl -sL $BASE_URL/.devcontainer/up.sh > ./.devcontainer/up.sh; chmod +x ./.devcontainer/up.sh
   curl -sL $BASE_URL/scripts/device_info.py > scripts/device_info.py
+  curl -sL $BASE_URL/docker/docker-compose.yml > docker/docker-compose.yml
 }
 
 # 检查是否有.devcontainer目录

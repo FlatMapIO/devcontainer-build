@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  devcontainer:
+    image: huodon/pytorch-devcontainer:118
+    user: vscode
+    working_dir: /workspace
+    volumes:
+      - ~/.cache:/home/vscode/.cache
+      - ~/.vscode-server:/home/vscode/.vscode-server
+      - ~/.vscode-server-insiders:/home/vscode/.vscode-server-insiders
+      - ~/.config/nvim:/home/vscode/.config/nvim
+      - ~/.local/share:/home/vscode/.local/share
+      - ~/.bun/install:/home/vscode/.bun/install
+      - ~/Downloads:/home/vscode/Downloads
+      # - ./ComfyUI:/workspace/ComfyUI
+      # - ./Fooocus-MRE:/workspace/Fooocus-MRE
+      # - ./stable-diffusion-models/models:/workspace/ComfyUI/models
+      # - ./stable-diffusion-models/models:/workspace/Fooocus-MRE/models
+    ports:
+      - 8188:8188
+    # command: |
+    #   cd ./workspace/ComfyUI
+    #   pip install -r requirements.txt
+    #   python main.py
+    #
