@@ -6,7 +6,6 @@
 
 ## Usage
 
-
 ```bash
 
 mkdir my-pytorch-project;
