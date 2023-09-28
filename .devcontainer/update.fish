@@ -1,10 +1,5 @@
 echo "=========== Update you container on start ==========="
 
-if test -z "$NO_PROXY"
-  echo '>> Config proxy'
-  echo "set -x NO_PROXY ::1,localhost,127.0.0.0/8,.cn,.local,.svc,.aliyuncs.com" >> ~/.config/fish/config.fish
-end
-
 if test $TZ = "Asia/Shanghai"
   echo ">> Set source mirror"
   pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
