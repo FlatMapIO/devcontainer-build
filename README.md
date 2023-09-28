@@ -28,8 +28,10 @@ npm install -g @devcontainers/cli
 
 devcontainer build \
     --workspace-folder . \
-    --config ./.devcontainer/vscode-pytorch-image.jsonc \
-    --image-name huodon/pytorch-devcontainer:118
+    --config .devcontainer/pytorch-devcontainer.jsonc \
+    --image-name huodon/pytorch-devcontainer:dev
+
+docker tag huodon/pytorch-devcontainer:dev huodon/pytorch-devcontainer:118
 ```
 
 ## Links

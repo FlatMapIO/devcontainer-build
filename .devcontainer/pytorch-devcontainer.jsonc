@@ -1,44 +1,42 @@
 {
-	"$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json",
-	"name": "pytorch-devcontainer",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-	"features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
-			"installCudnn": true,
-			// https://developer.nvidia.com/rdp/cudnn-download
-			"cudnnVersion": "8.9.5.29"
-		},
-		"ghcr.io/devcontainers/features/python:1": {
-			"installTools": true,
-			"installJupyterlab": true
-		},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/git-lfs:1": {},
-		"./features/fish": {},
-		"./features/pytorch": {
-			// "indexUrl": "https://download.pytorch.org/whl/cu118"
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"[python]": {
-					"editor.defaultFormatter": "ms-python.black-formatter",
-					"python.languageServer": "Pylance"
-				}
-			},
-			"extensions": [
-				"Codeium.codeium",
-				"ms-python.black-formatter",
-				"modular-mojotools.vscode-mojo",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"ms-toolsai.jupyter",
-				"ms-toolsai.vscode-jupyter-cell-tags",
-				"ms-toolsai.jupyter-keymap",
-				"ms-toolsai.vscode-jupyter-slideshow",
-				"ms-toolsai.vscode-jupyter-powertoys"
-			]
-		}
-	}
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json",
+  "name": "pytorch-devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "installCudnn": true,
+      // https://developer.nvidia.com/rdp/cudnn-download
+      "cudnnVersion": "8.9.5.29"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "installJupyterlab": true
+    },
+    "./features/homebrew": {},
+    "./features/pytorch": {
+      // "indexUrl": "https://download.pytorch.org/whl/cu118"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "python.languageServer": "Pylance"
+        }
+      },
+      "extensions": [
+        "Codeium.codeium",
+        "ms-python.black-formatter",
+        "modular-mojotools.vscode-mojo",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-toolsai.vscode-jupyter-powertoys"
+      ]
+    }
+  }
 }
