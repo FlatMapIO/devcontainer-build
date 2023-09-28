@@ -13,12 +13,10 @@
 		"PATH": "${containerEnv:PATH}:/home/vscode/.local/bin",
 		"LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:/usr/local/cuda/lib64",
 		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda",
-		// if TZ set to Asia/Shanghai, will use china source mirror
-		"TZ":"Asia/Shanghai",
-
 		// http proxy shuld be set in ~/.docker/config.json: https://docs.docker.com/network/proxy/#configure-the-docker-client
-
 		// "MODULAR_AUTH": "if set will install mojo from https://developer.modular.com/download",
+		// if TZ set to Asia/Shanghai, will use china source mirror
+		"TZ":"Asia/Shanghai"
 	},
 	"updateContentCommand": "fish .devcontainer/update.fish",
 	"postCreateCommand": [
@@ -30,6 +28,8 @@
 		"source=${localEnv:HOME}/.vscode-server-insiders,target=/home/vscode/.vscode-server-insiders,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.local/share/fonts,target=/home/vscode/.local/share/fonts,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.bun/install,target=/home/vscode/.bun/install,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/Downloads,target=/home/vscode/Downloads,type=bind,consistency=cached",
 		"source=/mnt,target=/mnt,type=bind,consistency=cached"
 	],
 	"customizations": {
