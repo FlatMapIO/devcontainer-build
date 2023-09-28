@@ -1,9 +1,8 @@
 ## Features
 - https://github.com/devcontainers/features/tree/main/src/nvidia-cuda
 - https://github.com/devcontainers/features/tree/main/src/python
-- https://github.com/devcontainers/features/tree/main/src/git
 - Pytorch CUDA 11.8
-- AI Kits
+- Homebrew (Host must be ubuntu)
 
 ## Usage
 
