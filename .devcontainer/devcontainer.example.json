@@ -27,7 +27,7 @@
 		"source=${localEnv:HOME}/.vscode-server,target=/home/vscode/.vscode-server,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.vscode-server-insiders,target=/home/vscode/.vscode-server-insiders,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.local/share/fonts,target=/home/vscode/.local/share/fonts,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.local/share,target=/home/vscode/.local/share,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.bun/install,target=/home/vscode/.bun/install,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/Downloads,target=/home/vscode/Downloads,type=bind,consistency=cached",
 		"source=/mnt,target=/mnt,type=bind,consistency=cached"
