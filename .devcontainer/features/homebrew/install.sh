@@ -2,10 +2,8 @@ su vscode -c /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebr
 
 ln -s /home/linuxbrew/.linuxbrew /opt/homebrew
 
-export PATH="/opt/homebrew/bin:$PATH"
+su vscode -c /opt/homebrew/bin/brew install git git-lfs fish lsd bat htop aria2 fd ripgrep nvim
 
-brew install git git-lfs fish lsd bat htop aria2 fd ripgrep nvim
-
-brew cleanup  --prune=all
+su vscode -c /opt/homebrew/bin/brew cleanup  --prune=all
 
 ls -l /opt/homebrew/Cellar
