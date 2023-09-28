@@ -7,3 +7,5 @@ export PATH="/opt/homebrew/bin:$PATH"
 brew install git git-lfs fish lsd bat htop aria2 fd ripgrep nvim
 
 brew cleanup  --prune=all
+
+ls -l /opt/homebrew/Cellar
