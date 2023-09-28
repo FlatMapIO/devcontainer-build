@@ -15,7 +15,10 @@
 		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda",
 		// if TZ set to Asia/Shanghai, will use china source mirror
 		"TZ":"Asia/Shanghai",
+
+		// proxy shuld be set in ~/.docker/config.json: https://docs.docker.com/network/proxy/#configure-the-docker-client
 		// "HTTPS_PROXY": "http://192.168.101.25:7890",
+
 		// "MODULAR_AUTH": "if set will install mojo from https://developer.modular.com/download",
 	},
 	"updateContentCommand": "fish .devcontainer/update.fish",
