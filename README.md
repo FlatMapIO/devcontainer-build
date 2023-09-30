@@ -17,6 +17,13 @@ cd my-pytorch-project
 ```
 > Execute `./scripts/up.sh` to keep up to date
 
+
+Add recipe to fish config:
+
+Put `alias create-pytorch-devcontainer /bin/bash -c "$(curl -fsSL https://dub.sh/pytorch-devcontainer)"` 
+to `~/.config/fish/config.fish`
+
+
 ## Build customized image
 
 ```bash
