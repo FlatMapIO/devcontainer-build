@@ -32,7 +32,14 @@ devcontainer build \
 docker tag huodon/pytorch-devcontainer:dev huodon/pytorch-devcontainer:118
 ```
 
+
+## TODO
+- [ ] Merge [Nvidia-CUDA](https://github.com/NVIDIA/nvidia-docker/blob/main/docker/Dockerfile.deb) and [Homebrew](https://github.com/Homebrew/brew/blob/master/Dockerfile) as base image
+
+
 ## Links
 - https://hub.docker.com/r/huodon/pytorch-devcontainer/tags
 - https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 - [配置 nvidia container toolkit](./docs/ubuntu-nvidia-container.md)
+
+
