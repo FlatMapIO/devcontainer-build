@@ -14,7 +14,7 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-    working_dir: /workspace
+    working_dir: /workspace/App
     volumes:
       - /mnt:/mnt
       - ~/Downloads:/home/vscode/Downloads
