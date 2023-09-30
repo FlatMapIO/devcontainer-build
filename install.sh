@@ -34,6 +34,7 @@ install() {
   fi
   curl -sL $BASE_URL/.devcontainer/up.sh > ./.devcontainer/up.sh; chmod +x ./.devcontainer/up.sh
   curl -sL $BASE_URL/scripts/device_info.py > scripts/device_info.py
+  curl -sL $BASE_URL/scripts/prune-container.fish > scripts/prune-container.fish; chmod +x ./scripts/prune-container.fish
   curl -sL $BASE_URL/docker/docker-compose.yml > docker/docker-compose.yml
 }
 
