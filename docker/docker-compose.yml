@@ -4,6 +4,12 @@ services:
   devcontainer:
     image: huodon/pytorch-devcontainer:118
     user: vscode
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
     working_dir: /workspace
     volumes:
       - ~/.cache:/home/vscode/.cache
