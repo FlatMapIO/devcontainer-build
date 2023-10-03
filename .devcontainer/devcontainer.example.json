@@ -26,11 +26,12 @@
 		"source=${localEnv:HOME}/.cache,target=/home/vscode/.cache,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.vscode-server,target=/home/vscode/.vscode-server,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.vscode-server-insiders,target=/home/vscode/.vscode-server-insiders,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.codeium/,target=/home/vscode/.codeium/,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.local/share,target=/home/vscode/.local/share,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.bun/install,target=/home/vscode/.bun/install,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/Downloads,target=/home/vscode/Downloads,type=bind,consistency=cached",
-		"source=/mnt,target=/mnt,type=bind,consistency=cached"
+		"source=/mnt,target=/mnt,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/Downloads,target=/home/vscode/Downloads,type=bind,consistency=cached"
 	],
 	"customizations": {
 		"vscode": {
