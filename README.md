@@ -20,7 +20,7 @@ cd my-pytorch-project
 
 Add recipe to fish config:
 
-Put `alias create-pytorch-devcontainer /bin/bash -c "$(curl -fsSL https://dub.sh/pytorch-devcontainer)"` 
+Put `alias create-pytorch-devcontainer /bin/bash -c "$(curl -fsSL https://dub.sh/pytorch-devcontainer)"`
 to `~/.config/fish/config.fish`
 
 
@@ -38,10 +38,6 @@ devcontainer build \
 
 docker tag huodon/pytorch-devcontainer:dev huodon/pytorch-devcontainer:118
 ```
-
-
-## TODO
-- [ ] Merge [Nvidia-CUDA](https://github.com/NVIDIA/nvidia-docker/blob/main/docker/Dockerfile.deb) and [Homebrew](https://github.com/Homebrew/brew/blob/master/Dockerfile) as base image
 
 
 ## Links
