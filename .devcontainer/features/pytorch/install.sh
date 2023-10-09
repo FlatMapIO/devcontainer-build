@@ -13,7 +13,7 @@ user_exec ${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-
 
 user_exec ${PYTHON_PATH}/bin/python3 -m pip install --user --upgrade --no-cache-dir -v \
     ipywidgets \
-    'xformers=0.0.22'
+    'xformers==0.0.22'
 
 echo "====================================================="
 python -m xformers.info
