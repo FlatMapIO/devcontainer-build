@@ -2,7 +2,7 @@ name: Publish Docker image
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "*" ]
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
@@ -21,4 +21,4 @@ jobs:
       - name: Build image
         run: devcontainer build --workspace-folder .  --config ./.devcontainer/pytorch-devcontainer.jsonc --image-name huodon/pytorch-devcontainer:118 --platform linux/amd64
       - name: Push image
-        run: docker push huodon/pytorch-devcontainer:118
+        run: docker push huodon/pytorch-devcontainer:121
