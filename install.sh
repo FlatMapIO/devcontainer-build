@@ -33,7 +33,8 @@ install() {
     curl -sL $BASE_URL/.devcontainer/update.fish > ./.devcontainer/update.fish
   fi
   curl -sL $BASE_URL/.devcontainer/up.sh > ./.devcontainer/up.sh; chmod +x ./.devcontainer/up.sh
-  curl -sL $BASE_URL/scripts/device_info.py > scripts/device_info.py
+  curl -sL $BASE_URL/scripts/dev-info.fish > scripts/dev-info.fish; chmod +x ./scripts/dev-info.fish
+  curl -sL $BASE_URL/scripts/shell.fish > scripts/shell.fish; chmod +x ./scripts/shell.fish
   curl -sL $BASE_URL/scripts/prune-container.fish > scripts/prune-container.fish; chmod +x ./scripts/prune-container.fish
   curl -sL $BASE_URL/docker/Dockerfile > docker/Dockerfile
   curl -sL $BASE_URL/docker-compose.yml > docker-compose.yml
