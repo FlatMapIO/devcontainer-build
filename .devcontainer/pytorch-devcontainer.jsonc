@@ -4,7 +4,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
     "ghcr.io/devcontainers/features/nvidia-cuda:1": {
-      "cudaVersion": "12.1",
+      "cudaVersion": "11.8",
       "installCudnn": true,
       // https://developer.nvidia.com/rdp/cudnn-download
       "cudnnVersion": "8.9.5.29"
