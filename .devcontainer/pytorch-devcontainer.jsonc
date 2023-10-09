@@ -3,20 +3,16 @@
   "name": "pytorch-devcontainer",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
-    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+    "./features/nvidia-cuda": {
       "cudaVersion": "11.8",
       "installCudnn": true,
-      // https://developer.nvidia.com/rdp/cudnn-download
-      "cudnnVersion": "8.9.5.29"
     },
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": true,
       "installJupyterlab": true
     },
+    "./features/pytorch": {},
     "./features/homebrew": {},
-    "./features/pytorch": {
-      // "indexUrl": "https://download.pytorch.org/whl/cu118"
-    }
   },
   "customizations": {
     "vscode": {

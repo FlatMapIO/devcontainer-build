@@ -4,11 +4,6 @@
     "name": "Pytorch",
     "description": "Pip install pytorch CUDA 11.8",
     "options": {
-        "indexUrl": {
-            "type": "string",
-            "default": "https://download.pytorch.org/whl/cu118",
-            "description": ""
-        }
     },
     "containerEnv": {
 
