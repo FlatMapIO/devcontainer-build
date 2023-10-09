@@ -8,6 +8,8 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
       - name: Check out the repo
         uses: actions/checkout@v4
       - name: Log in to Docker Hub
@@ -19,6 +21,6 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm install -g @devcontainers/cli
       - name: Build image
-        run: devcontainer build --workspace-folder .  --config ./.devcontainer/pytorch-devcontainer.jsonc --image-name huodon/pytorch-devcontainer:118 --platform linux/amd64
+        run: devcontainer build --workspace-folder . --config ./.devcontainer/pytorch-devcontainer.jsonc --image-name huodon/pytorch-devcontainer:${GITHUB_REF##*/} --platform linux/amd64
       - name: Push image
-        run: docker push huodon/pytorch-devcontainer:118
+        run: docker push huodon/pytorch-devcontainer:${GITHUB_REF##*/}
