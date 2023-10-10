@@ -2,8 +2,16 @@
     "id": "pytorch",
     "version": "1.0.2",
     "name": "Pytorch",
-    "description": "Pip install pytorch CUDA 11.8",
+    "description": "Pip install pytorch",
     "options": {
+        "cudaVersion":{
+            "default": "11.8",
+            "type": "string",
+            "proposals": [
+                "11.8",
+                "12.1",
+            ]
+        }
     },
     "containerEnv": {
 

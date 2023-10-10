@@ -11,7 +11,9 @@
       "installTools": true,
       "installJupyterlab": true
     },
-    "./features/pytorch": {},
+    "./features/pytorch": {
+       "cudaVersion": "11.8"
+    },
     "./features/homebrew": {},
   },
   "customizations": {

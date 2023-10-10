@@ -1,9 +1,3 @@
-## Features
-- https://github.com/devcontainers/features/tree/main/src/nvidia-cuda
-- https://github.com/devcontainers/features/tree/main/src/python
-- Pytorch CUDA 11.8
-- Homebrew (Host must be ubuntu)
-
 ## Usage
 
 ```bash
@@ -23,6 +17,18 @@ Add recipe to fish config:
 Put `alias create-pytorch-devcontainer /bin/bash -c "$(curl -fsSL https://dub.sh/pytorch-devcontainer)"`
 to `~/.config/fish/config.fish`
 
+## Changes
+
+
+- [2022年 10月 10日 星期二 15:32:36 CST] 不再 pyturch feature 层中安装额外库， xformers 等库还需要时间适配 pytorch 1.1, 这些库转移到应用层构建时安装:
+```Dockerfile
+FROM huodon/pytorch-devcontainer:118
+
+USER vscode
+RUN pip install --no-cache-dir \
+    ipywidgets \
+    xformers==0.0.22'
+```
 
 ## Build customized image
 
@@ -38,7 +44,6 @@ devcontainer build \
 
 docker tag huodon/pytorch-devcontainer:dev huodon/pytorch-devcontainer:118
 ```
-
 
 ## Links
 - https://hub.docker.com/r/huodon/pytorch-devcontainer/tags
