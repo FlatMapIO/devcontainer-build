@@ -9,9 +9,11 @@ user_exec /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/
 ln -s /home/linuxbrew/.linuxbrew /opt/homebrew
 
 user_exec /opt/homebrew/bin/brew install \
-    git git-lfs \
-    fish lsd bat htop aria2 fd \
+    git git-lfs
+user_exec /opt/homebrew/bin/brew install \
     ripgrep difftastic just nvim \
+    fish lsd bat htop aria2 fd
+user_exec /opt/homebrew/bin/brew install \
     ffmpeg
 
 user_exec /opt/homebrew/bin/brew cleanup  --prune=all
