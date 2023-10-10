@@ -4,7 +4,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
     "./features/nvidia-cuda": {
-      "cudaVersion": "11.8",
+      "cudaVersion": "12.1",
       "installCudnn": true,
     },
     "ghcr.io/devcontainers/features/python:1": {
@@ -12,7 +12,7 @@
       "installJupyterlab": true
     },
     "./features/pytorch": {
-       "cudaVersion": "11.8"
+       "cudaVersion": "12.1"
     },
     "./features/homebrew": {},
   },
