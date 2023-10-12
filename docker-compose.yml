@@ -27,5 +27,5 @@ services:
       # ====================================================================
       # - ./ComfyUI:/workspace/ComfyUI
     ports:
-      - 8080:8080
+      - 7860:7860
     command: python main.py --listen=0.0.0.0

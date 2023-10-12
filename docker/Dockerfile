@@ -14,5 +14,6 @@ RUN sudo apt update; \
 
 
 # ComfyUI
-# RUN pip install --no-cache-dir -r \
+# RUN -mount=type=cache,target=/vscode/.cache/pip,rw \
+#   pip install --no-cache-dir -r \
 #   https://raw.githubusercontent.com/comfyanonymous/ComfyUI/master/requirements.txt
