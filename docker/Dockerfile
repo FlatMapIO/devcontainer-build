@@ -9,7 +9,7 @@ WORKDIR /app
 # resolve opencv dependency issue
 # https://www.cnblogs.com/niuben/p/17587591.html
 RUN sudo apt update; \
-  sudo apt install -y libgl1-mesa-glx; \
+  sudo apt-get install libgl1-mesa-dev libglib2.0-0 \
   sudo rm -rf /var/lib/apt/lists/*
 
 
