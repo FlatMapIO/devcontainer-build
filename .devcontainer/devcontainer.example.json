@@ -1,58 +1,56 @@
 {
-	"$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.base.schema.json",
-	"name": "vscode-pytorch",
-	"image": "huodon/pytorch-devcontainer:121",
-	"runArgs": [
-		"--gpus",
-		"all"
-	],
-	"hostRequirements": {
-		"gpu": "optional"
-	},
-	"remoteEnv": {
-		"PATH": "${containerEnv:PATH}:/home/vscode/.local/bin",
-		"LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:/usr/local/cuda/lib64",
-		"XLA_FLAGS": "--xla_gpu_cuda_data_dir=/usr/local/cuda",
-		// http proxy shuld be set in ~/.docker/config.json: https://docs.docker.com/network/proxy/#configure-the-docker-client
-		// "MODULAR_AUTH": "if set will install mojo from https://developer.modular.com/download",
-		// if TZ set to Asia/Shanghai, will use china source mirror
-		"TZ":"Asia/Shanghai"
-	},
-	"updateContentCommand": "fish .devcontainer/update.fish",
-	"postCreateCommand": [
-		"nvidia-smi"
-	],
-	"mounts": [
-		"source=${localEnv:HOME}/.cache,target=/home/vscode/.cache,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.vscode-server,target=/home/vscode/.vscode-server,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.vscode-server-insiders,target=/home/vscode/.vscode-server-insiders,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.codeium/,target=/home/vscode/.codeium/,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.local/share,target=/home/vscode/.local/share,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.bun/install,target=/home/vscode/.bun/install,type=bind,consistency=cached",
-		"source=/mnt,target=/mnt,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/Downloads,target=/home/vscode/Downloads,type=bind,consistency=cached"
-	],
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"[python]": {
-					"editor.defaultFormatter": "ms-python.black-formatter",
-					"python.languageServer": "Pylance"
-				}
-			},
-			"extensions": [
-				"Codeium.codeium",
-				"ms-python.black-formatter",
-				"modular-mojotools.vscode-mojo",
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"ms-toolsai.jupyter",
-				"ms-toolsai.vscode-jupyter-cell-tags",
-				"ms-toolsai.jupyter-keymap",
-				"ms-toolsai.vscode-jupyter-slideshow",
-				"ms-toolsai.vscode-jupyter-powertoys"
-			]
-		}
-	}
+  "name": "vscode-cuda",
+  "image": "huodon/cuda-devel:12.2.2",
+  "runArgs": [
+    "--gpus",
+    "all"
+  ],
+  "hostRequirements": {
+    "gpu": "optional"
+  },
+  "remoteEnv": {
+    // http proxy shuld be set in ~/.docker/config.json: https://docs.docker.com/network/proxy/#configure-the-docker-client
+    // "MODULAR_AUTH": "if set will install mojo from https://developer.modular.com/download",
+    // if TZ set to Asia/Shanghai, will use china source mirror
+    "TZ": "Asia/Shanghai"
+  },
+  // "updateContentCommand": "fish .devcontainer/update.fish",
+  "postAttachCommand": "bash -c 'eval \"$(pkgx --shellcode)\"; dev; fish -l'",
+  "mounts": [
+    "source=${localEnv:HOME}/.cache,target=/home/sa/.cache,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.vscode-server,target=/home/sa/.vscode-server,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.codeium/,target=/home/sa/.codeium/,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.config/,target=/home/sa/.config/,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.local/,target=/home/sa/.local/,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.bun/install,target=/home/sa/.bun/install,type=bind,consistency=cached",
+    "source=/mnt,target=/mnt,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.pkgx,target=/home/sa/.pkgx,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/dotconfig,target=/home/sa/dotconfig,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "fish": {
+            "path": "/home/sa/.pkgx/fishshell.com/v*/bin/fish"
+          }
+        },
+        "ruff.lint.run": "onSave",
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        }
+      },
+      "extensions": [
+        "Codeium.codeium",
+        "charliermarsh.ruff",
+        "modular-mojotools.vscode-mojo",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.vscode-jupyter-slideshow"
+      ]
+    }
+  }
 }
